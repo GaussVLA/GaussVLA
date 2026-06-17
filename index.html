@@ -6,7 +6,7 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="MoTVLA: Eliciting Spatial Reasoning in Vision-Language-Action Models via Multimodal Token Embeddings - Md Selim Sarowar, Md Tanvir Islam, *Sungho Kim and Sangtae Ahn">
+  <meta name="title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model - Md Selim Sarowar, Md Tanvir Islam, *Sungho Kim and Sangtae Ahn">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
@@ -74,7 +74,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>MoTVLA: Eliciting Spatial Reasoning in Vision-Language-Action Models via Multimodal Token Embeddings - Md Selim Sarowar, Md Tanvir Islam, *Sungho Kim and Sangtae Ahn</title>
+  <title>GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model- Md Selim Sarowar, Md Tanvir Islam, *Sungho Kim and Sangtae Ahn</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -189,7 +189,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">MoTVLA: Eliciting Spatial Reasoning in Mamba-based Vision-Language-Action Model via Multimodal Token Embeddings.</h1>
+            <h1 class="title is-1 publication-title">GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -278,7 +278,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-           Vision-Language-Action (VLA) models encode visual observations as flat 2D patch tokens that carry no intrinsic geometric structure, and augmenting them with dense monocular depth injects per-pixel scalar values that encode neither surface orientation nor geometric confidence. This leaves the policy with no mechanism for explicit spatial verification before action decoding. We present MoTVLA, a Mamba-based VLA built around two contributions. First, the Gaussian Spatial Tokenizer (GST) converts frozen affine-invariant depth and frozen semantic patch features into a compact set of anisotropic 3D Gaussian primitives. Each primitive carries a metric residual mean, a diagonal log-covariance whose eigenstructure encodes local surface extent, and a learned opacity that expresses per-primitive geometric confidence. Spatial attention pooling with learned queries concentrates a fixed token budget on geometrically salient regions rather than distributing capacity uniformly across the image. Second, Depth-Aware Chain-of-Thought (DA-CoT) reasoning supervises four structured intermediate spatial thoughts (3D object grounding, grasp affordance contact geometry, pairwise metric distances, and coarse SE(3) waypoints) as explicit generation targets, with cross-attention to the full-resolution Gaussian field at every reasoning block. A Mamba-SSM reasoning core fuses GST tokens, language tokens and frozen CLIP features in a single multimodal token sequence, and a compact flow-matching action expert with mixture-of-experts feedforward sublayers decodes 7-DoF action chunks of horizon H=16 through dual cross-attention to the Mamba states and the DA-CoT outputs. MoTVLA achieves 90.0% average success on the LIBERO benchmark while running at real-time inference rates on a single GPU, and component-wise ablations confirm that GST and DA-CoT contribute independently and combine super-additively on precision-demanding manipulation tasks.
+           Vision-Language-Action (VLA) models encode visual observations as flat 2D patch tokens that carry no intrinsic geometric structure, and augmenting them with dense monocular depth injects per-pixel scalar values that encode neither surface orientation nor geometric confidence. This leaves the policy with limited structured spatial reasoning for action prediction. We propose GaussVLA, a mamba-based VLA that incorporates two custom modules: Gaussian Spatial Tokenizer (GST) to lift frozen semantic and depth features into compact 3D Gaussian tokens, pools geometrically salient regions with learned queries, and Depth-Aware Chain-of-Thought (DA-CoT) that performs structured, non-autoregressive geometric reasoning under language and flow-time conditioning. Across both simulation and real-world evaluations, GaussVLA demonstrates strong spatial-manipulation performance while remaining parameter efficient. On LIBERO, it achieves 93.5% average success and 100.0% success on the Spatial suite with only 200M parameters, improving over SpatialVLA by 19.7% relative average success while remaining significantly more parameter-efficient. Our experimental results suggest that geometry-aware representations can provide a practical path toward more efficient and deployable robot manipulation.
           </p>
         </div>
       </div>
