@@ -1,1 +1,1 @@
-# MoTVLA: Eliciting Spatial Reasoning in Vision-Language-Action Models via Multimodal Token Embeddings
+**GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Mode**
