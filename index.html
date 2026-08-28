@@ -3,412 +3,589 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model - Md Selim Sarowar, Md Tanvir Islam, *Sungho Kim and Sangtae Ahn">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model">
+  <meta name="description" content="GaussVLA lifts flat 2D patches into compact 3D Gaussian tokens for geometry-aware robot manipulation, reaching 93.5% average and 100% Spatial success on LIBERO.">
+  <meta name="keywords" content="vision-language-action model, VLA, robot manipulation, 3D Gaussian tokens, spatial reasoning, depth-aware chain-of-thought, LIBERO, Mamba, embodied AI, robot learning">
+  <meta name="author" content="Md Selim Sarowar, Md Tanvir Islam, Sungho Kim, Sangtae Ahn">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="og:site_name" content="Yeungnam University &amp; Kyungpook National University">
+  <meta property="og:title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model">
+  <meta property="og:description" content="GaussVLA lifts flat 2D patches into compact 3D Gaussian tokens for geometry-aware robot manipulation, reaching 93.5% average and 100% Spatial success on LIBERO.">
+  <meta property="og:url" content="https://gaussvla.github.io/GaussVLA/">
+  <meta property="og:image" content="https://gaussvla.github.io/GaussVLA/static/images/visual_ProposedModel%20copy%205.jpg">
+  <meta property="og:image:alt" content="GaussVLA overview: flat 2D tokens versus 3D Gaussian Spatial Tokens">
+  <meta property="article:published_time" content="2026-08-25T00:00:00.000Z">
+  <meta property="article:author" content="Md Selim Sarowar">
+  <meta property="article:section" content="Robotics">
+  <meta property="article:tag" content="vision-language-action model">
+  <meta property="article:tag" content="robot manipulation">
+  <meta property="article:tag" content="3D Gaussian tokens">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model">
+  <meta name="twitter:description" content="GaussVLA lifts flat 2D patches into compact 3D Gaussian tokens for geometry-aware robot manipulation, reaching 93.5% average and 100% Spatial success on LIBERO.">
+  <meta name="twitter:image" content="https://gaussvla.github.io/GaussVLA/static/images/visual_ProposedModel%20copy%205.jpg">
+  <meta name="twitter:image:alt" content="GaussVLA overview: flat 2D tokens versus 3D Gaussian Spatial Tokens">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <!-- Academic / Google Scholar -->
+  <meta name="citation_title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model">
+  <meta name="citation_author" content="Sarowar, Md Selim">
+  <meta name="citation_author" content="Islam, Md Tanvir">
+  <meta name="citation_author" content="Kim, Sungho">
+  <meta name="citation_author" content="Ahn, Sangtae">
+  <meta name="citation_publication_date" content="2026/08/25">
+  <meta name="citation_conference_title" content="British Machine Vision Conference (BMVC)">
+  <meta name="citation_arxiv_id" content="2608.24959">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2608.24959">
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+  <link rel="canonical" href="https://gaussvla.github.io/GaussVLA/">
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model- Md Selim Sarowar, Md Tanvir Islam, *Sungho Kim and Sangtae Ahn</title>
-  
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/robot.png">
+  <link rel="icon" type="image/png" href="static/images/robot.png">
   <link rel="apple-touch-icon" href="static/images/robot.png">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model",
+    "description": "GaussVLA lifts flat 2D patches into compact 3D Gaussian tokens for geometry-aware robot manipulation, reaching 93.5% average and 100% Spatial success on LIBERO.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      { "@type": "Person", "name": "Md Selim Sarowar", "affiliation": { "@type": "Organization", "name": "Yeungnam University" } },
+      { "@type": "Person", "name": "Md Tanvir Islam", "affiliation": { "@type": "Organization", "name": "Kyungpook National University" } },
+      { "@type": "Person", "name": "Sungho Kim", "affiliation": { "@type": "Organization", "name": "Yeungnam University" } },
+      { "@type": "Person", "name": "Sangtae Ahn", "affiliation": { "@type": "Organization", "name": "Kyungpook National University" } }
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "datePublished": "2026-08-25",
+    "publisher": { "@type": "Organization", "name": "British Machine Vision Conference (BMVC)" },
+    "url": "https://gaussvla.github.io/GaussVLA/",
+    "image": "https://gaussvla.github.io/GaussVLA/static/images/visual_ProposedModel%20copy%205.jpg",
+    "identifier": "arXiv:2608.24959",
+    "keywords": ["vision-language-action model", "robot manipulation", "3D Gaussian tokens", "spatial reasoning", "LIBERO", "embodied AI"],
+    "abstract": "Vision-Language-Action (VLA) models encode visual observations as flat 2D patch tokens that carry no intrinsic geometric structure, and augmenting them with dense monocular depth injects per-pixel scalar values that encode neither surface orientation nor geometric confidence. We propose GaussVLA, a mamba-based VLA with a Gaussian Spatial Tokenizer (GST) and a Depth-Aware Chain-of-Thought (DA-CoT) module. On LIBERO it achieves 93.5% average success and 100.0% success on the Spatial suite with only 200M trainable parameters.",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
     "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      { "@type": "Thing", "name": "Robot Manipulation" },
+      { "@type": "Thing", "name": "Vision-Language-Action Models" }
     ]
   }
   </script>
 </head>
 <body>
 
-  
+<!-- Sticky section navigation -->
+<nav class="gv-nav" id="gv-nav" aria-label="Section navigation">
+  <div class="gv-nav-inner">
+    <a class="gv-nav-brand" href="#top">Gauss<span>VLA</span></a>
+    <button class="gv-nav-toggle" id="gv-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="gv-nav-links" id="gv-nav-links">
+      <a href="#abstract">Abstract</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#ablation">Ablation</a>
+      <a href="#realworld">Real Robot</a>
+      <a href="#video">Video</a>
+      <a href="#bibtex">BibTeX</a>
+    </div>
+  </div>
+  <div class="gv-progress" id="gv-progress"></div>
+</nav>
 
-  <main id="main-content">
+<main id="main-content">
+  <a id="top"></a>
+
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
             <h1 class="title is-1 publication-title">GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model</h1>
+
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Md Selim Sarowar</a><sup>1</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Md Tanvir Islam</a><sup>2</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Sungho Kim</a><sup>1*</sup>,</span>
-                   <span class="author-block">
-                      <a href="Fourth AUTHOR PERSONAL LINK" target="_blank">Sangtae Anh</a><sup>2</sup></span>
-                  </div>
+              <!-- TODO: add personal homepage URLs, e.g. <a href="https://...">Md Selim Sarowar</a> -->
+              <span class="author-block">Md Selim Sarowar<sup>1</sup>,</span>
+              <span class="author-block">Md Tanvir Islam<sup>2</sup>,</span>
+              <span class="author-block">Sungho Kim<sup>1,&#8224;</sup>,</span>
+              <span class="author-block">Sangtae Ahn<sup>2</sup></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Yeungnam University<sup>1</sup>, Kyungpook National University<sup>2</sup><br>BMVC'26,UK (Rank A)</span>
-                  </div>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>1</sup>Yeungnam University &nbsp;&nbsp; <sup>2</sup>Kyungpook National University</span>
+              <br>
+              <span class="author-block eql-cntrb"><sup>&#8224;</sup>Corresponding author</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+            <div class="gv-venue-badge">BMVC 2026 &middot; United Kingdom</div>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
- 
-                <!-- TODO: Update with your arXiv paper ID -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://openreview.net/forum?id=IYv9sR4feE" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>OpenReview</span>
-                </a>
-              </span>
+                  <a href="https://arxiv.org/abs/2608.24959" target="_blank" rel="noopener"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2608.24959" target="_blank" rel="noopener"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://openreview.net/forum?id=IYv9sR4feE" target="_blank" rel="noopener"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-comments"></i></span>
+                    <span>OpenReview</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-quote-left"></i></span>
+                    <span>Cite</span>
+                  </a>
+                </span>
+              </div>
+              <p class="gv-supp-note">The arXiv release includes the supplementary material.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/all_episodes_25mb.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        GaussVLA is working smoothly on Long-Horizon tasks on the LIBERO dataset. 
-      </h2>
+  <!-- Teaser video -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop playsinline height="100%" preload="metadata">
+          <source src="static/videos/all_episodes_25mb.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          GaussVLA executing long-horizon LIBERO tasks end to end.
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-           Vision-Language-Action (VLA) models encode visual observations as flat 2D patch tokens that carry no intrinsic geometric structure, and augmenting them with dense monocular depth injects per-pixel scalar values that encode neither surface orientation nor geometric confidence. This leaves the policy with limited structured spatial reasoning for action prediction. We propose GaussVLA, a mamba-based VLA that incorporates two custom modules: Gaussian Spatial Tokenizer (GST) to lift frozen semantic and depth features into compact 3D Gaussian tokens, pools geometrically salient regions with learned queries, and Depth-Aware Chain-of-Thought (DA-CoT) that performs structured, non-autoregressive geometric reasoning under language and flow-time conditioning. Across both simulation and real-world evaluations, GaussVLA demonstrates strong spatial-manipulation performance while remaining parameter efficient. On LIBERO, it achieves 93.5% average success and 100.0% success on the Spatial suite with only 200M parameters, improving over SpatialVLA by 19.7% relative average success while remaining significantly more parameter-efficient. Our experimental results suggest that geometry-aware representations can provide a practical path toward more efficient and deployable robot manipulation.
-          </p>
+  <!-- Key numbers -->
+  <section class="section gv-stats-section">
+    <div class="container is-max-desktop">
+      <div class="gv-stats">
+        <div class="gv-stat">
+          <div class="gv-stat-value" data-count-to="100.0" data-decimals="1" data-suffix="%">0%</div>
+          <div class="gv-stat-label">LIBERO-Spatial success</div>
+        </div>
+        <div class="gv-stat">
+          <div class="gv-stat-value" data-count-to="93.5" data-decimals="1" data-suffix="%">0%</div>
+          <div class="gv-stat-label">LIBERO average success</div>
+        </div>
+        <div class="gv-stat">
+          <div class="gv-stat-value" data-count-to="200" data-decimals="0" data-suffix="M">0M</div>
+          <div class="gv-stat-label">Trainable parameters</div>
+        </div>
+        <div class="gv-stat">
+          <div class="gv-stat-value" data-count-to="12.97" data-decimals="2" data-suffix=" ms">0 ms</div>
+          <div class="gv-stat-label">Inference latency</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/visual_ProposedModel copy 6.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/visual_ProposedModel copy 5.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/visual_visual.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/Hyperparameter Sweep.png" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <!-- Abstract -->
+  <section class="section hero is-light" id="abstract">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Vision-Language-Action (VLA) models encode visual observations as flat 2D patch tokens that carry no
+              intrinsic geometric structure, and augmenting them with dense monocular depth injects per-pixel scalar
+              values that encode neither surface orientation nor geometric confidence. This leaves the policy with
+              limited structured spatial reasoning for action prediction. We propose GaussVLA, a mamba-based VLA that
+              incorporates two custom modules: <strong>Gaussian Spatial Tokenizer (GST)</strong> to lift frozen semantic
+              and depth features into compact 3D Gaussian tokens, pools geometrically salient regions with learned
+              queries, and <strong>Depth-Aware Chain-of-Thought (DA-CoT)</strong> that performs structured,
+              non-autoregressive geometric reasoning under language and flow-time conditioning. Across both simulation
+              and real-world evaluations, GaussVLA demonstrates strong spatial-manipulation performance while remaining
+              parameter efficient. On LIBERO, it achieves 93.5% average success and 100.0% success on the Spatial suite
+              with only 200M parameters, improving over SpatialVLA by 19.7% relative average success while remaining
+              significantly more parameter-efficient. Our experimental results suggest that geometry-aware
+              representations can provide a practical path toward more efficient and deployable robot manipulation.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
+  <!-- Method -->
+  <section class="section" id="method">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <p class="gv-section-intro">
+        Pick a module to see what it contributes. Click any figure to enlarge it.
+      </p>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
+      <div class="gv-tabs" role="tablist">
+        <button class="gv-tab is-active" role="tab" aria-selected="true" data-tab="overview">Overview</button>
+        <button class="gv-tab" role="tab" aria-selected="false" data-tab="gst">Gaussian Spatial Tokenizer</button>
+        <button class="gv-tab" role="tab" aria-selected="false" data-tab="dacot">Depth-Aware CoT</button>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
+      <div class="gv-tab-panel is-active" data-panel="overview">
+        <figure class="gv-figure">
+          <img src="static/images/visual_ProposedModel copy 5.jpg" class="gv-zoomable"
+               alt="GaussVLA overview: flat 2D tokens lack geometry, while 3D Gaussian Spatial Tokens recover grounding, contact geometry, metric distance and coarse waypoints" loading="lazy">
+          <figcaption>
+            <strong>Overview of GaussVLA.</strong> (a) Flat 2D tokens and weak depth cues leave the policy with
+            ambiguous 3D understanding. (b) GST converts each 2D patch into a 3D Gaussian token and pools it with
+            learned spatial-attention queries, yielding 3D grounding, contact geometry, metric distance and coarse
+            waypoints. (c) Accumulated attention maps: without GST spatial reasoning attention is too sparse and the
+            rollout fails; with GST it concentrates on the task-relevant region and succeeds.
+          </figcaption>
+        </figure>
+      </div>
 
+      <div class="gv-tab-panel" data-panel="gst">
+        <div class="gv-note-grid">
+          <div class="gv-note">
+            <h3>What it does</h3>
+            <p>Lifts frozen semantic (SigLIP) and dense depth (Depth Anything V2) features into compact 3D Gaussian
+              tokens, then pools geometrically salient regions with learned queries instead of a flat patch grid.</p>
+          </div>
+          <div class="gv-note">
+            <h3>What it buys</h3>
+            <p>Adding GST alone lifts the LIBERO average from <strong>78.1%</strong> to <strong>90.5%</strong>, and
+              LIBERO-PRO from <strong>11.2%</strong> to <strong>29.0%</strong>, for +11.2M parameters and +1.4&nbsp;ms
+              of latency.</p>
+          </div>
+        </div>
+        <figure class="gv-figure">
+          <img src="static/images/visual_ProposedModel copy 5.jpg" class="gv-zoomable"
+               alt="Gaussian Spatial Tokenizer pipeline and attention maps" loading="lazy">
+          <figcaption><strong>GST pipeline</strong>, from 2D patch to 3D Gaussian token to spatial attention pooling.</figcaption>
+        </figure>
+      </div>
 
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <div class="gv-tab-panel" data-panel="dacot">
+        <div class="gv-note-grid">
+          <div class="gv-note">
+            <h3>What it does</h3>
+            <p>Performs structured, non-autoregressive geometric reasoning over the Gaussian tokens under language and
+              flow-time conditioning, so reasoning cost does not grow with a token-by-token decode.</p>
+          </div>
+          <div class="gv-note">
+            <h3>What it buys</h3>
+            <p>DA-CoT is what carries the long-horizon suites: <strong>83.0%</strong> vs <strong>77.0%</strong> on
+              LIBERO-Long and <strong>92.3%</strong> vs <strong>78.2%</strong> on LIBERO-90 at 20 trials.</p>
+          </div>
+        </div>
+        <figure class="gv-figure">
+          <img src="static/images/dacot_ablation_bar.png" class="gv-zoomable"
+               alt="Bar chart comparing success rate with and without DA-CoT on LIBERO-Long and LIBERO-90 at 20 and 40 trials" loading="lazy">
+          <figcaption>
+            <strong>DA-CoT ablation.</strong> Success rate with and without DA-CoT on LIBERO-Long and LIBERO-90, at 20
+            and 40 evaluation trials. The gain is largest on LIBERO-90, where the reasoning horizon is longest.
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
+  <!-- Results -->
+  <section class="section hero is-light" id="results">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">LIBERO Benchmark</h2>
+      <p class="gv-section-intro">
+        Click any column header to sort. Toggle the filter to compare only against similarly sized models.
+      </p>
 
+      <div class="gv-table-controls">
+        <label class="gv-switch">
+          <input type="checkbox" id="gv-filter-small">
+          <span class="gv-switch-track"><span class="gv-switch-thumb"></span></span>
+          <span class="gv-switch-label">Show only models under 1B parameters</span>
+        </label>
+        <span class="gv-sort-hint"><i class="fas fa-sort"></i> sortable</span>
+      </div>
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
+      <div class="gv-table-wrap">
+        <table class="gv-table" id="gv-results-table">
+          <thead>
+            <tr>
+              <th class="gv-sortable gv-th-text" data-sort="text" scope="col">Method <i class="fas fa-sort"></i></th>
+              <th class="gv-sortable gv-th-text" data-sort="text" scope="col">Venue <i class="fas fa-sort"></i></th>
+              <th class="gv-sortable" data-sort="num" scope="col">Spatial <i class="fas fa-sort"></i></th>
+              <th class="gv-sortable" data-sort="num" scope="col">Object <i class="fas fa-sort"></i></th>
+              <th class="gv-sortable" data-sort="num" scope="col">Goal <i class="fas fa-sort"></i></th>
+              <th class="gv-sortable" data-sort="num" scope="col">Long <i class="fas fa-sort"></i></th>
+              <th class="gv-sortable gv-col-avg" data-sort="num" scope="col">Average <i class="fas fa-sort"></i></th>
+              <th class="gv-sortable" data-sort="num" scope="col">Params <i class="fas fa-sort"></i></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-params="80"><th scope="row">Diffusion Policy</th><td>RSS'23</td><td data-v="78.3">78.3</td><td data-v="92.5">92.5</td><td data-v="68.3">68.3</td><td data-v="50.5">50.5</td><td class="gv-col-avg" data-v="72.4">72.4</td><td data-v="80">80M</td></tr>
+            <tr data-params="24"><th scope="row">MaIL</th><td>CoRL'24</td><td data-v="53.8">53.8</td><td data-v="81.5">81.5</td><td data-v="56.3">56.3</td><td data-v="41.7">41.7</td><td class="gv-col-avg" data-v="58.3">58.3</td><td data-v="24">24M</td></tr>
+            <tr data-params="152"><th scope="row">QueST</th><td>NeurIPS'24</td><td data-v="89.0">89.0</td><td data-v="90.0">90.0</td><td data-v="88.4">88.4</td><td data-v="87.0">87.0</td><td class="gv-col-avg" data-v="88.6">88.6</td><td data-v="152">152M</td></tr>
+            <tr data-params="7000"><th scope="row">OpenVLA</th><td>CoRL'24</td><td data-v="84.7">84.7</td><td data-v="88.4">88.4</td><td data-v="79.2">79.2</td><td data-v="53.7">53.7</td><td class="gv-col-avg" data-v="76.5">76.5</td><td data-v="7000">7B</td></tr>
+            <tr data-params="4000"><th scope="row">SpatialVLA</th><td>RSS'25</td><td data-v="88.2">88.2</td><td data-v="89.9">89.9</td><td data-v="78.6">78.6</td><td data-v="55.5">55.5</td><td class="gv-col-avg" data-v="78.1">78.1</td><td data-v="4000">4B</td></tr>
+            <tr data-params="7000"><th scope="row">ThinkAct</th><td>NeurIPS'25</td><td data-v="88.3">88.3</td><td data-v="91.4">91.4</td><td data-v="87.1">87.1</td><td data-v="70.9">70.9</td><td class="gv-col-avg" data-v="84.4">84.4</td><td data-v="7000">7B</td></tr>
+            <tr data-params="7000"><th scope="row">CoT-VLA</th><td>CVPR'25</td><td data-v="81.5">81.5</td><td data-v="91.6">91.6</td><td data-v="87.6">87.6</td><td data-v="69.0">69.0</td><td class="gv-col-avg" data-v="82.43">82.43</td><td data-v="7000">7B</td></tr>
+            <tr data-params="7000"><th scope="row">Mask2Act</th><td>BMVC'25</td><td data-v="76.1">76.1</td><td data-v="68.7">68.7</td><td data-v="75.1">75.1</td><td data-v="30.6">30.6</td><td class="gv-col-avg" data-v="62.6">62.6</td><td data-v="7000">7B</td></tr>
+            <tr data-params="4000"><th scope="row">TraceVLA</th><td>ICLR'25</td><td data-v="84.6">84.6</td><td data-v="85.2">85.2</td><td data-v="75.1">75.1</td><td data-v="54.1">54.1</td><td class="gv-col-avg" data-v="74.8">74.8</td><td data-v="4000">4B</td></tr>
+            <tr data-params="3300"><th scope="row">&pi;<sub>0</sub></th><td>RSS'26</td><td data-v="90.0">90.0</td><td data-v="86.0">86.0</td><td data-v="95.0">95.0</td><td data-v="73.0">73.0</td><td class="gv-col-avg" data-v="86.0">86.0</td><td data-v="3300">3.3B</td></tr>
+            <tr data-params="179.1"><th scope="row">SUREFlow</th><td>IROS'26</td><td data-v="94.8">94.8</td><td data-v="91.0">91.0</td><td data-v="93.8">93.8</td><td data-v="90.2">90.2</td><td class="gv-col-avg" data-v="92.5">92.5</td><td data-v="179.1">179.1M</td></tr>
+            <tr class="gv-ours" data-params="200"><th scope="row">GaussVLA <span class="gv-ours-tag">Ours</span></th><td>BMVC'26</td><td data-v="100.0">100.0</td><td data-v="95.8">95.8</td><td data-v="95.3">95.3</td><td data-v="83.0">83.0</td><td class="gv-col-avg" data-v="93.5">93.5</td><td data-v="200">200M<sup>&#8225;</sup></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="gv-table-note">
+        Success rate (%) on the four LIBERO suites. <sup>&#8225;</sup>200M trainable parameters; the full system is
+        roughly 1B including the frozen SigLIP and Depth Anything V2 backbones.
+      </p>
+
+      <figure class="gv-figure">
+        <img src="static/images/visual_ProposedModel copy 6.jpg" class="gv-zoomable"
+             alt="LIBERO rollouts from initial state through execution to end state for the Spatial, Goal, Object and Long suites" loading="lazy">
+        <figcaption>
+          <strong>Representative LIBERO rollouts.</strong> GaussVLA executing one task from each suite, from initial
+          state to completion.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Ablation -->
+  <section class="section" id="ablation">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Build the Model</h2>
+      <p class="gv-section-intro">
+        Switch the two modules on and off to see the exact cost and benefit of each. Every number below is measured.
+      </p>
+
+      <div class="gv-builder">
+        <div class="gv-builder-controls">
+          <label class="gv-switch is-large">
+            <input type="checkbox" id="gv-gst">
+            <span class="gv-switch-track"><span class="gv-switch-thumb"></span></span>
+            <span class="gv-switch-label">
+              <strong>GST</strong>
+              <em>Gaussian Spatial Tokenizer</em>
+            </span>
+          </label>
+          <label class="gv-switch is-large">
+            <input type="checkbox" id="gv-dacot">
+            <span class="gv-switch-track"><span class="gv-switch-thumb"></span></span>
+            <span class="gv-switch-label">
+              <strong>DA-CoT</strong>
+              <em>Depth-Aware Chain-of-Thought</em>
+            </span>
+          </label>
+        </div>
+
+        <div class="gv-builder-readout">
+          <div class="gv-variant-name" id="gv-variant-name">Vanilla GaussVLA</div>
+          <div class="gv-token-mode" id="gv-token-mode">Visual input: flat 2D tokens</div>
+
+          <div class="gv-metric">
+            <div class="gv-metric-head"><span>LIBERO</span><span class="gv-metric-val" id="gv-m-libero">78.1%</span></div>
+            <div class="gv-bar"><div class="gv-bar-fill" id="gv-b-libero" style="width:78.1%"></div></div>
+          </div>
+          <div class="gv-metric">
+            <div class="gv-metric-head"><span>LIBERO-PRO</span><span class="gv-metric-val" id="gv-m-pro">11.2%</span></div>
+            <div class="gv-bar"><div class="gv-bar-fill is-alt" id="gv-b-pro" style="width:11.2%"></div></div>
+          </div>
+
+          <div class="gv-metric-grid">
+            <div><span class="gv-mg-label">Total params</span><span class="gv-mg-val" id="gv-m-params">179M</span></div>
+            <div><span class="gv-mg-label">Trainable</span><span class="gv-mg-val" id="gv-m-train">158M</span></div>
+            <div><span class="gv-mg-label">GFLOPs</span><span class="gv-mg-val" id="gv-m-flops">3.50</span></div>
+            <div><span class="gv-mg-label">Latency</span><span class="gv-mg-val" id="gv-m-lat">10.85 ms</span></div>
+          </div>
+
+          <p class="gv-delta" id="gv-delta">Turn on a module to see its effect.</p>
+        </div>
+      </div>
+
+      <figure class="gv-figure">
+        <img src="static/images/Hyperparameter Sweep.png" class="gv-zoomable"
+             alt="Two hyperparameter sweep curves, both peaking at 93.5 percent LIBERO average" loading="lazy">
+        <figcaption>
+          <strong>Hyperparameter sweep.</strong> LIBERO average success across two loss coefficients. Both peak at the
+          reported 93.5%, at 0.05 (left) and 0.10 (right), and degrade sharply beyond 0.5.
+        </figcaption>
+      </figure>
+
+      <figure class="gv-figure">
+        <img src="static/images/failed_case_collage.png" class="gv-zoomable"
+             alt="Collage of failure case rollout frames on a bowl and plate manipulation task" loading="lazy">
+        <figcaption>
+          <strong>Failure cases.</strong> Remaining errors concentrate on fine contact geometry, where the gripper
+          reaches the right region but the grasp does not settle.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Real world -->
+  <section class="section hero is-light" id="realworld">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Real Robot (SO-101)</h2>
+      <p class="gv-section-intro">
+        Hover a bar to read its exact success rate.
+      </p>
+
+      <div class="gv-chart" id="gv-realworld-chart">
+        <div class="gv-legend">
+          <span class="gv-legend-item"><i class="gv-swatch gv-c-act"></i>ACT</span>
+          <span class="gv-legend-item"><i class="gv-swatch gv-c-svla"></i>SpatialVLA</span>
+          <span class="gv-legend-item"><i class="gv-swatch gv-c-ours"></i>GaussVLA (Ours)</span>
+        </div>
+        <div class="gv-groups">
+          <div class="gv-group" data-label="Pick-Place">
+            <div class="gv-cols">
+              <div class="gv-col gv-c-act" style="--h:52.0%" data-v="52.0"><span>52.0</span></div>
+              <div class="gv-col gv-c-svla" style="--h:61.3%" data-v="61.3"><span>61.3</span></div>
+              <div class="gv-col gv-c-ours" style="--h:75.7%" data-v="75.7"><span>75.7</span></div>
+            </div>
+            <div class="gv-group-label">Pick-Place</div>
+          </div>
+          <div class="gv-group" data-label="Stacking">
+            <div class="gv-cols">
+              <div class="gv-col gv-c-act" style="--h:34.0%" data-v="34.0"><span>34.0</span></div>
+              <div class="gv-col gv-c-svla" style="--h:39.7%" data-v="39.7"><span>39.7</span></div>
+              <div class="gv-col gv-c-ours" style="--h:47.3%" data-v="47.3"><span>47.3</span></div>
+            </div>
+            <div class="gv-group-label">Stacking</div>
+          </div>
+          <div class="gv-group" data-label="Sorting">
+            <div class="gv-cols">
+              <div class="gv-col gv-c-act" style="--h:21.0%" data-v="21.0"><span>21.0</span></div>
+              <div class="gv-col gv-c-svla" style="--h:37.8%" data-v="37.8"><span>37.8</span></div>
+              <div class="gv-col gv-c-ours" style="--h:53.5%" data-v="53.5"><span>53.5</span></div>
+            </div>
+            <div class="gv-group-label">Sorting</div>
+          </div>
+          <div class="gv-group is-avg" data-label="Average">
+            <div class="gv-cols">
+              <div class="gv-col gv-c-act" style="--h:35.66%" data-v="35.66"><span>35.66</span></div>
+              <div class="gv-col gv-c-svla" style="--h:46.27%" data-v="46.27"><span>46.27</span></div>
+              <div class="gv-col gv-c-ours" style="--h:58.83%" data-v="58.83"><span>58.83</span></div>
+            </div>
+            <div class="gv-group-label">Average</div>
+          </div>
+        </div>
+        <p class="gv-chart-caption">Multi-task success rate (%) on the SO-101 arm.</p>
+      </div>
+
+      <div class="gv-table-wrap gv-table-narrow">
+        <table class="gv-table">
+          <caption class="gv-caption">Single-task Pick-Place, in-distribution and out-of-distribution</caption>
+          <thead>
+            <tr><th scope="col">Method</th><th scope="col">ID</th><th scope="col">OOD</th><th class="gv-col-avg" scope="col">Avg.</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">ACT</th><td>57.0</td><td>27.8</td><td class="gv-col-avg">42.4</td></tr>
+            <tr><th scope="row">SpatialVLA</th><td>69.0</td><td>35.8</td><td class="gv-col-avg">52.4</td></tr>
+            <tr class="gv-ours"><th scope="row">GaussVLA <span class="gv-ours-tag">Ours</span></th><td>81.0</td><td>46.7</td><td class="gv-col-avg">63.9</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="gv-figure">
+        <img src="static/images/visual_visual.jpg" class="gv-zoomable"
+             alt="Real-world SO-101 evaluation comparing GaussVLA with ACT and SpatialVLA, plus rollout frames of a physical stacking task" loading="lazy">
+        <figcaption>
+          <strong>Real-world SO-101 evaluation.</strong> (a) Multi-task settings, (b) single-task Pick-Place under ID
+          and OOD conditions, and (c) rollout frames for
+          <code>Pick_the_red_cube_and_stack_on_the_small_wheel</code>.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Single-episode rollout -->
+  <section class="section" id="rollouts">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Single-Episode Rollout</h2>
+      <p class="gv-section-intro">
+        One LIBERO episode at full length, uncut.
+      </p>
+      <div class="gv-video-block">
+        <video controls muted loop playsinline preload="metadata">
+          <source src="static/videos/episode_0.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video presentation -->
+  <section class="hero is-small is-light" id="video">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" title="GaussVLA video presentation"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
+  <section class="section" id="bibtex">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
         <h2 class="title">BibTeX</h2>
@@ -417,23 +594,39 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@article{sarowar2026gaussvla,
+  title   = {GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model},
+  author  = {Sarowar, Md Selim and Islam, Md Tanvir and Kim, Sungho and Ahn, Sangtae},
+  journal = {arXiv preprint arXiv:2608.24959},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2608.24959}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          Page template adapted from <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a>,
+          licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+</main>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<!-- Scroll to top -->
+<button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
-    <!-- End of Statcounter Code -->
+<!-- Lightbox -->
+<div class="gv-lightbox" id="gv-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <button class="gv-lightbox-close" id="gv-lightbox-close" aria-label="Close">&times;</button>
+  <img id="gv-lightbox-img" src="" alt="">
+  <p class="gv-lightbox-caption" id="gv-lightbox-caption"></p>
+</div>
 
-  </body>
-  </html>
+</body>
+</html>
