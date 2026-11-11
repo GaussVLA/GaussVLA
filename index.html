@@ -3,38 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model</title>
 
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model">
-  <meta name="description" content="GaussVLA lifts flat 2D patches into compact 3D Gaussian tokens for geometry-aware robot manipulation, reaching 93.5% average and 100% Spatial success on LIBERO.">
-  <meta name="keywords" content="vision-language-action model, VLA, robot manipulation, 3D Gaussian tokens, spatial reasoning, depth-aware chain-of-thought, LIBERO, Mamba, embodied AI, robot learning">
+  <meta name="description" content="GaussVLA (BMVC 2026) lifts flat 2D patch tokens into compact 3D Gaussian tokens for geometry-aware robot manipulation: 93.5% average and 100% Spatial success on LIBERO.">
+  <meta name="keywords" content="vision-language-action model, VLA, robot manipulation, 3D Gaussian tokens, spatial reasoning, depth-aware chain-of-thought, LIBERO, Mamba">
   <meta name="author" content="Md Selim Sarowar, Md Tanvir Islam, Sungho Kim, Sangtae Ahn">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://gaussvla.github.io/GaussVLA/">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Yeungnam University &amp; Kyungpook National University">
   <meta property="og:title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model">
-  <meta property="og:description" content="GaussVLA lifts flat 2D patches into compact 3D Gaussian tokens for geometry-aware robot manipulation, reaching 93.5% average and 100% Spatial success on LIBERO.">
+  <meta property="og:description" content="BMVC 2026. 93.5% average and 100% Spatial success on LIBERO.">
   <meta property="og:url" content="https://gaussvla.github.io/GaussVLA/">
-  <meta property="og:image" content="https://gaussvla.github.io/GaussVLA/static/images/teaser.jpg">
-  <meta property="og:image:alt" content="GaussVLA overview: flat 2D tokens versus 3D Gaussian Spatial Tokens">
-  <meta property="article:published_time" content="2026-08-25T00:00:00.000Z">
-  <meta property="article:author" content="Md Selim Sarowar">
-  <meta property="article:section" content="Robotics">
-  <meta property="article:tag" content="vision-language-action model">
-  <meta property="article:tag" content="robot manipulation">
-  <meta property="article:tag" content="3D Gaussian tokens">
-
-  <!-- Twitter -->
+  <meta property="og:image" content="https://gaussvla.github.io/GaussVLA/static/images/framework.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model">
-  <meta name="twitter:description" content="GaussVLA lifts flat 2D patches into compact 3D Gaussian tokens for geometry-aware robot manipulation, reaching 93.5% average and 100% Spatial success on LIBERO.">
-  <meta name="twitter:image" content="https://gaussvla.github.io/GaussVLA/static/images/teaser.jpg">
-  <meta name="twitter:image:alt" content="GaussVLA overview: flat 2D tokens versus 3D Gaussian Spatial Tokens">
+  <meta name="twitter:image" content="https://gaussvla.github.io/GaussVLA/static/images/framework.jpg">
 
-  <!-- Academic / Google Scholar -->
   <meta name="citation_title" content="GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model">
   <meta name="citation_author" content="Sarowar, Md Selim">
   <meta name="citation_author" content="Islam, Md Tanvir">
@@ -45,51 +30,18 @@
   <meta name="citation_arxiv_id" content="2608.24959">
   <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2608.24959">
 
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="canonical" href="https://gaussvla.github.io/GaussVLA/">
-
-  <!-- Preconnect for performance -->
+  <link rel="icon" type="image/png" href="static/images/robot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-  <title>GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model</title>
-
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/png" href="static/images/robot.png">
-  <link rel="apple-touch-icon" href="static/images/robot.png">
-
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/index.css">
-
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-  <noscript>
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/index.js"></script>
 
-  <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model",
-    "description": "GaussVLA lifts flat 2D patches into compact 3D Gaussian tokens for geometry-aware robot manipulation, reaching 93.5% average and 100% Spatial success on LIBERO.",
     "author": [
       { "@type": "Person", "name": "Md Selim Sarowar", "affiliation": { "@type": "Organization", "name": "Yeungnam University" } },
       { "@type": "Person", "name": "Md Tanvir Islam", "affiliation": { "@type": "Organization", "name": "Kyungpook National University" } },
@@ -99,459 +51,385 @@
     "datePublished": "2026-08-25",
     "publisher": { "@type": "Organization", "name": "British Machine Vision Conference (BMVC)" },
     "url": "https://gaussvla.github.io/GaussVLA/",
-    "image": "https://gaussvla.github.io/GaussVLA/static/images/teaser.jpg",
-    "identifier": "arXiv:2608.24959",
-    "keywords": ["vision-language-action model", "robot manipulation", "3D Gaussian tokens", "spatial reasoning", "LIBERO", "embodied AI"],
-    "abstract": "Vision-Language-Action (VLA) models encode visual observations as flat 2D patch tokens that carry no intrinsic geometric structure, and augmenting them with dense monocular depth injects per-pixel scalar values that encode neither surface orientation nor geometric confidence. We propose GaussVLA, a mamba-based VLA with a Gaussian Spatial Tokenizer (GST) and a Depth-Aware Chain-of-Thought (DA-CoT) module. On LIBERO it achieves 93.5% average success and 100.0% success on the Spatial suite with only 200M trainable parameters.",
-    "isAccessibleForFree": true,
-    "about": [
-      { "@type": "Thing", "name": "Robot Manipulation" },
-      { "@type": "Thing", "name": "Vision-Language-Action Models" }
-    ]
+    "identifier": "arXiv:2608.24959"
   }
   </script>
 </head>
 <body>
 
-<!-- Sticky section navigation -->
-<nav class="gv-nav" id="gv-nav" aria-label="Section navigation">
-  <div class="gv-nav-inner">
-    <a class="gv-nav-brand" href="#top">Gauss<span>VLA</span></a>
-    <button class="gv-nav-toggle" id="gv-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <i class="fas fa-bars"></i>
+<nav class="nav" id="nav" aria-label="Sections">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top"><span class="dot" aria-hidden="true"></span>GaussVLA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
-    <div class="gv-nav-links" id="gv-nav-links">
+    <div class="nav-links" id="nav-links">
       <a href="#method">Method</a>
-      <a href="#results">Results</a>
-      <a href="#ablation">Ablation</a>
+      <a href="#libero">LIBERO</a>
+      <a href="#transfer">Meta-World &amp; CALVIN</a>
+      <a href="#robustness">LIBERO-PRO</a>
       <a href="#realworld">Real Robot</a>
-      <a href="#video">Video</a>
+      <a href="#ablation">Ablation</a>
+      <a href="#rollout">Rollout</a>
       <a href="#bibtex">BibTeX</a>
     </div>
   </div>
-  <div class="gv-progress" id="gv-progress"></div>
+  <div class="nav-progress" id="nav-progress"></div>
 </nav>
 
-<main id="main-content">
-  <a id="top"></a>
+<main id="top">
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model</h1>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <span class="chip">BMVC 2026</span>
+      <h1 class="hero-title"><span class="grad">GaussVLA</span></h1>
+      <p class="hero-sub">Geometry-Aware Spatial Reasoning for Vision-Language-Action Model</p>
 
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: add personal homepage URLs, e.g. <a href="https://...">Md Selim Sarowar</a> -->
-              <span class="author-block">Md Selim Sarowar<sup>1</sup>,</span>
-              <span class="author-block">Md Tanvir Islam<sup>2</sup>,</span>
-              <span class="author-block">Sungho Kim<sup>1,&#8224;</sup>,</span>
-              <span class="author-block">Sangtae Ahn<sup>2</sup></span>
-            </div>
-
-            <div class="is-size-6 publication-authors">
-              <span class="author-block"><sup>1</sup>Yeungnam University &nbsp;&nbsp; <sup>2</sup>Kyungpook National University</span>
-              <br>
-              <span class="author-block eql-cntrb"><sup>&#8224;</sup>Corresponding author</span>
-            </div>
-
-            <div class="gv-venue-badge">BMVC 2026 &middot; United Kingdom</div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2608.24959" target="_blank" rel="noopener"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="ai ai-arxiv"></i></span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2608.24959" target="_blank" rel="noopener"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="https://openreview.net/forum?id=IYv9sR4feE" target="_blank" rel="noopener"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-comments"></i></span>
-                    <span>OpenReview</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-quote-left"></i></span>
-                    <span>Cite</span>
-                  </a>
-                </span>
-              </div>
-              <p class="gv-supp-note">The arXiv release includes the supplementary material.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Teaser video -->
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <video poster="" id="tree" autoplay controls muted loop playsinline height="100%" preload="metadata">
-          <source src="static/videos/all_episodes_25mb.mp4" type="video/mp4">
-        </video>
-        <h2 class="subtitle has-text-centered">
-          GaussVLA executing long-horizon LIBERO tasks end to end.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- Key numbers -->
-  <section class="section gv-stats-section">
-    <div class="container is-max-desktop">
-      <div class="gv-stats">
-        <div class="gv-stat">
-          <div class="gv-stat-value" data-count-to="100.0" data-decimals="1" data-suffix="%">0%</div>
-          <div class="gv-stat-label">LIBERO-Spatial success</div>
-        </div>
-        <div class="gv-stat">
-          <div class="gv-stat-value" data-count-to="93.5" data-decimals="1" data-suffix="%">0%</div>
-          <div class="gv-stat-label">LIBERO average success</div>
-        </div>
-        <div class="gv-stat">
-          <div class="gv-stat-value" data-count-to="200" data-decimals="0" data-suffix="M">0M</div>
-          <div class="gv-stat-label">Trainable parameters</div>
-        </div>
-        <div class="gv-stat">
-          <div class="gv-stat-value" data-count-to="12.97" data-decimals="2" data-suffix=" ms">0 ms</div>
-          <div class="gv-stat-label">Inference latency</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Method -->
-  <section class="section hero is-light" id="method">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Method</h2>
-
-      <figure class="gv-figure">
-        <img src="static/images/framework.jpg" class="gv-zoomable"
-             alt="GaussVLA framework: frozen SigLIP and Depth Anything V2 encoders, Gaussian Spatial Tokenizer, Mamba backbone, DA-CoT layer and flow-matching action head" loading="lazy">
-        <figcaption><strong>Framework of GaussVLA.</strong></figcaption>
-      </figure>
-
-      <figure class="gv-figure">
-        <img src="static/images/teaser.jpg" class="gv-zoomable" style="max-width:720px;margin:0 auto;display:block"
-             alt="GaussVLA overview: flat 2D tokens versus 3D Gaussian Spatial Tokens" loading="lazy">
-        <figcaption><strong>Overview of GaussVLA.</strong></figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Results -->
-  <section class="section hero is-light" id="results">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">LIBERO Benchmark</h2>
-      <p class="gv-section-intro">
-        Click any column header to sort. Toggle the filter to compare only against similarly sized models.
+      <p class="authors">
+        <span>Md Selim Sarowar<sup>1</sup></span>
+        <span>Md Tanvir Islam<sup>2</sup></span>
+        <span>Sungho Kim<sup>1*</sup></span>
+        <span>Sangtae Ahn<sup>2</sup></span>
+      </p>
+      <p class="affils">
+        <span><sup>1</sup>Yeungnam University, Republic of Korea</span>
+        <span><sup>2</sup>Kyungpook National University, Republic of Korea</span>
+        <span class="corr"><sup>*</sup>Corresponding author</span>
       </p>
 
-      <div class="gv-table-controls">
-        <label class="gv-switch">
-          <input type="checkbox" id="gv-filter-small">
-          <span class="gv-switch-track"><span class="gv-switch-thumb"></span></span>
-          <span class="gv-switch-label">Show only models under 1B parameters</span>
-        </label>
-        <span class="gv-sort-hint"><i class="fas fa-sort"></i> sortable</span>
+      <div class="btns">
+        <a class="btn" href="https://arxiv.org/abs/2608.24959" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 12 5l7 14M8 13h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>arXiv</a>
+        <a class="btn" href="https://arxiv.org/pdf/2608.24959" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7zM14 3v5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Paper</a>
+        <a class="btn" href="https://openreview.net/forum?id=IYv9sR4feE" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>OpenReview</a>
+        <a class="btn" href="#bibtex">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17h4l2-4V7H6v6h3zm8 0h4l2-4V7h-6v6h3z" fill="currentColor"/></svg>BibTeX</a>
       </div>
 
-      <div class="gv-table-wrap">
-        <table class="gv-table" id="gv-results-table">
+      <figure class="video-card">
+        <video autoplay muted loop playsinline controls preload="metadata">
+          <source src="static/videos/all_episodes_25mb.mp4" type="video/mp4">
+        </video>
+        <figcaption>GaussVLA rollouts on LIBERO (simulation).</figcaption>
+      </figure>
+
+      <div class="stats">
+        <div class="stat c1"><b>93.5%</b><span>LIBERO average</span></div>
+        <div class="stat c2"><b>100%</b><span>LIBERO-Spatial</span></div>
+        <div class="stat c3"><b>54.9%</b><span>Meta-World average</span></div>
+        <div class="stat c4"><b>58.8%</b><span>SO-101 real robot, multi-task average</span></div>
+        <div class="stat c5"><b>12.97&nbsp;ms</b><span>End-to-end latency per step</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Method -->
+  <section class="band alt" id="method">
+    <div class="wrap">
+      <div class="head"><span class="kicker k1">Method</span><h2>Framework</h2></div>
+      <figure class="fig">
+        <img src="static/images/framework.jpg" class="zoom" width="2280" height="875" loading="lazy"
+             alt="GaussVLA framework: frozen SigLIP and Depth Anything V2 encoders, Gaussian Spatial Tokenizer, Mamba backbone, DA-CoT layer and flow-matching action head">
+        <figcaption>Framework of GaussVLA for VLA-based robot manipulation.</figcaption>
+      </figure>
+      <figure class="fig fig-narrow">
+        <img src="static/images/teaser.jpg" class="zoom" width="1140" height="1072" loading="lazy"
+             alt="Overview: flat 2D tokens versus 3D Gaussian Spatial Tokens, with attention maps of a failed and a successful rollout">
+        <figcaption>Overview of GaussVLA.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- LIBERO -->
+  <section class="band" id="libero">
+    <div class="wrap">
+      <div class="head"><span class="kicker k2">Simulation</span><h2>LIBERO</h2></div>
+      <div class="table-wrap">
+        <table class="tbl sortable" id="libero-table">
           <thead>
             <tr>
-              <th class="gv-sortable gv-th-text" data-sort="text" scope="col">Method <i class="fas fa-sort"></i></th>
-              <th class="gv-sortable gv-th-text" data-sort="text" scope="col">Venue <i class="fas fa-sort"></i></th>
-              <th class="gv-sortable" data-sort="num" scope="col">Spatial <i class="fas fa-sort"></i></th>
-              <th class="gv-sortable" data-sort="num" scope="col">Object <i class="fas fa-sort"></i></th>
-              <th class="gv-sortable" data-sort="num" scope="col">Goal <i class="fas fa-sort"></i></th>
-              <th class="gv-sortable" data-sort="num" scope="col">Long <i class="fas fa-sort"></i></th>
-              <th class="gv-sortable gv-col-avg" data-sort="num" scope="col">Average <i class="fas fa-sort"></i></th>
-              <th class="gv-sortable" data-sort="num" scope="col">Params <i class="fas fa-sort"></i></th>
+              <th data-sort="text">Method</th><th data-sort="text">Venue</th>
+              <th data-sort="num">Spatial</th><th data-sort="num">Object</th><th data-sort="num">Goal</th>
+              <th data-sort="num">Long</th><th data-sort="num" class="col-avg">Average</th><th>Parameters</th>
             </tr>
           </thead>
           <tbody>
-            <tr data-params="80"><th scope="row">Diffusion Policy</th><td>RSS'23</td><td data-v="78.3">78.3</td><td data-v="92.5">92.5</td><td data-v="68.3">68.3</td><td data-v="50.5">50.5</td><td class="gv-col-avg" data-v="72.4">72.4</td><td data-v="80">80M</td></tr>
-            <tr data-params="24"><th scope="row">MaIL</th><td>CoRL'24</td><td data-v="53.8">53.8</td><td data-v="81.5">81.5</td><td data-v="56.3">56.3</td><td data-v="41.7">41.7</td><td class="gv-col-avg" data-v="58.3">58.3</td><td data-v="24">24M</td></tr>
-            <tr data-params="152"><th scope="row">QueST</th><td>NeurIPS'24</td><td data-v="89.0">89.0</td><td data-v="90.0">90.0</td><td data-v="88.4">88.4</td><td data-v="87.0">87.0</td><td class="gv-col-avg" data-v="88.6">88.6</td><td data-v="152">152M</td></tr>
-            <tr data-params="7000"><th scope="row">OpenVLA</th><td>CoRL'24</td><td data-v="84.7">84.7</td><td data-v="88.4">88.4</td><td data-v="79.2">79.2</td><td data-v="53.7">53.7</td><td class="gv-col-avg" data-v="76.5">76.5</td><td data-v="7000">7B</td></tr>
-            <tr data-params="4000"><th scope="row">SpatialVLA</th><td>RSS'25</td><td data-v="88.2">88.2</td><td data-v="89.9">89.9</td><td data-v="78.6">78.6</td><td data-v="55.5">55.5</td><td class="gv-col-avg" data-v="78.1">78.1</td><td data-v="4000">4B</td></tr>
-            <tr data-params="7000"><th scope="row">ThinkAct</th><td>NeurIPS'25</td><td data-v="88.3">88.3</td><td data-v="91.4">91.4</td><td data-v="87.1">87.1</td><td data-v="70.9">70.9</td><td class="gv-col-avg" data-v="84.4">84.4</td><td data-v="7000">7B</td></tr>
-            <tr data-params="7000"><th scope="row">CoT-VLA</th><td>CVPR'25</td><td data-v="81.5">81.5</td><td data-v="91.6">91.6</td><td data-v="87.6">87.6</td><td data-v="69.0">69.0</td><td class="gv-col-avg" data-v="82.43">82.43</td><td data-v="7000">7B</td></tr>
-            <tr data-params="7000"><th scope="row">Mask2Act</th><td>BMVC'25</td><td data-v="76.1">76.1</td><td data-v="68.7">68.7</td><td data-v="75.1">75.1</td><td data-v="30.6">30.6</td><td class="gv-col-avg" data-v="62.6">62.6</td><td data-v="7000">7B</td></tr>
-            <tr data-params="4000"><th scope="row">TraceVLA</th><td>ICLR'25</td><td data-v="84.6">84.6</td><td data-v="85.2">85.2</td><td data-v="75.1">75.1</td><td data-v="54.1">54.1</td><td class="gv-col-avg" data-v="74.8">74.8</td><td data-v="4000">4B</td></tr>
-            <tr data-params="3300"><th scope="row">&pi;<sub>0</sub></th><td>RSS'26</td><td data-v="90.0">90.0</td><td data-v="86.0">86.0</td><td data-v="95.0">95.0</td><td data-v="73.0">73.0</td><td class="gv-col-avg" data-v="86.0">86.0</td><td data-v="3300">3.3B</td></tr>
-            <tr data-params="179.1"><th scope="row">SUREFlow</th><td>IROS'26</td><td data-v="94.8">94.8</td><td data-v="91.0">91.0</td><td data-v="93.8">93.8</td><td data-v="90.2">90.2</td><td class="gv-col-avg" data-v="92.5">92.5</td><td data-v="179.1">179.1M</td></tr>
-            <tr class="gv-ours" data-params="200"><th scope="row">GaussVLA <span class="gv-ours-tag">Ours</span></th><td>BMVC'26</td><td data-v="100.0">100.0</td><td data-v="95.8">95.8</td><td data-v="95.3">95.3</td><td data-v="83.0">83.0</td><td class="gv-col-avg" data-v="93.5">93.5</td><td data-v="200">200M<sup>&#8225;</sup></td></tr>
+            <tr><th>DP</th><td>RSS'23</td><td>78.3</td><td>92.5</td><td>68.3</td><td>50.5</td><td class="col-avg">72.4</td><td>80M</td></tr>
+            <tr><th>MaIL</th><td>CoRL'24</td><td>53.8</td><td>81.5</td><td>56.3</td><td>41.7</td><td class="col-avg">58.3</td><td>24M</td></tr>
+            <tr><th>QueST</th><td>NeurIPS'24</td><td>89.0</td><td>90.0</td><td>88.4</td><td>87.0</td><td class="col-avg">88.6</td><td>152M</td></tr>
+            <tr><th>OpenVLA</th><td>CoRL'24</td><td>84.7</td><td>88.4</td><td>79.2</td><td>53.7</td><td class="col-avg">76.5</td><td>7B</td></tr>
+            <tr><th>SpatialVLA</th><td>RSS'25</td><td>88.2</td><td>89.9</td><td>78.6</td><td>55.5</td><td class="col-avg">78.1</td><td>4B</td></tr>
+            <tr><th>ThinkAct</th><td>NeurIPS'25</td><td>88.3</td><td>91.4</td><td>87.1</td><td>70.9</td><td class="col-avg">84.4</td><td>7B</td></tr>
+            <tr><th>CoT-VLA</th><td>CVPR'25</td><td>81.5</td><td class="second">91.6</td><td>87.6</td><td>69.0</td><td class="col-avg">82.43</td><td>7B</td></tr>
+            <tr><th>Mask2Act</th><td>BMVC'25</td><td>76.1</td><td>68.7</td><td>75.1</td><td>30.6</td><td class="col-avg">62.6</td><td>7B</td></tr>
+            <tr><th>TraceVLA</th><td>ICLR'25</td><td>84.6</td><td>85.2</td><td>75.1</td><td>54.1</td><td class="col-avg">74.8</td><td>4B</td></tr>
+            <tr><th>&pi;<sub>0</sub></th><td>RSS'26</td><td>90.0</td><td>86.0</td><td class="second">95.0</td><td>73.0</td><td class="col-avg">86.0</td><td>3.3B</td></tr>
+            <tr><th>SUREFlow</th><td>IROS'26</td><td class="second">94.8</td><td>91.0</td><td>93.8</td><td class="best">90.2</td><td class="col-avg second">92.5</td><td>179.1M</td></tr>
+            <tr class="ours"><th>GaussVLA</th><td>BMVC'26</td><td class="best">100</td><td class="best">95.8</td><td class="best">95.3</td><td class="second">83.0</td><td class="col-avg best">93.5</td><td>1B</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="gv-table-note">
-        Success rate (%) on the four LIBERO suites. <sup>&#8225;</sup>200M trainable parameters; the full system is
-        roughly 1B including the frozen SigLIP and Depth Anything V2 backbones.
-      </p>
+      <p class="note">Success rate (%) on the four LIBERO suites, 40 rollouts per task. <b>Bold</b>: best, <u>underline</u>: second best. Click a column header to sort.</p>
+      <figure class="fig">
+        <img src="static/images/libero_tasks.jpg" class="zoom" width="1467" height="882" loading="lazy"
+             alt="LIBERO rollouts from initial state to end state for the Spatial, Goal, Object and Long suites">
+        <figcaption>Representative LIBERO rollouts, from initial state to completion.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-      <figure class="gv-figure">
-        <img src="static/images/libero_tasks.jpg" class="gv-zoomable"
-             alt="LIBERO rollouts from initial state through execution to end state for the Spatial, Goal, Object and Long suites" loading="lazy">
-        <figcaption>
-          <strong>Representative LIBERO rollouts.</strong> GaussVLA executing one task from each suite, from initial
-          state to completion.
-        </figcaption>
+  <!-- Meta-World & CALVIN -->
+  <section class="band alt" id="transfer">
+    <div class="wrap">
+      <div class="head"><span class="kicker k3">Transfer</span><h2>Meta-World &amp; CALVIN</h2></div>
+      <div class="two-col">
+        <div>
+          <h3 class="sub">Meta-World <small>success rate (%) by difficulty split</small></h3>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Method</th><th>Venue</th><th>Easy</th><th>Mid</th><th>Hard</th><th>V.Hard</th><th class="col-avg">Avg.</th></tr></thead>
+              <tbody>
+                <tr><th>BC-RNN</th><td>CoRL'21</td><td>4.5</td><td>3.8</td><td>3.2</td><td>3.0</td><td class="col-avg">3.6</td></tr>
+                <tr><th>DP</th><td>IJRR'25</td><td class="second">83.6</td><td>31.1</td><td>9.0</td><td>26.6</td><td class="col-avg">37.6</td></tr>
+                <tr><th>TinyVLA</th><td>ICRA'25</td><td>77.6</td><td>21.5</td><td>11.4</td><td>15.8</td><td class="col-avg">31.6</td></tr>
+                <tr><th>&pi;<sub>0</sub></th><td>RSS'26</td><td>71.8</td><td class="best">48.2</td><td class="best">41.7</td><td class="second">30.0</td><td class="col-avg second">47.9</td></tr>
+                <tr class="ours"><th>GaussVLA</th><td>BMVC'26</td><td class="best">92.7</td><td class="second">47.9</td><td class="second">37.3</td><td class="best">41.6</td><td class="col-avg best">54.9</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h3 class="sub">CALVIN ABCD&rarr;D <small>tasks completed in a row, 10% subset</small></h3>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Method</th><th>Venue</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th class="col-avg">Avg. Len.</th></tr></thead>
+              <tbody>
+                <tr><th>MCIL</th><td>RSS'21</td><td>0.37</td><td>0.027</td><td>0.002</td><td>0.000</td><td>0.000</td><td class="col-avg">0.40</td></tr>
+                <tr><th>MT-R3M</th><td>CoRL'22</td><td>0.408</td><td>0.146</td><td>0.043</td><td>0.014</td><td>0.002</td><td class="col-avg">0.61</td></tr>
+                <tr><th>RT-1</th><td>RSS'23</td><td>0.249</td><td>0.069</td><td>0.015</td><td>0.006</td><td>0.000</td><td class="col-avg">0.34</td></tr>
+                <tr><th>GR-1</th><td>ICLR'24</td><td class="best">0.778</td><td class="best">0.533</td><td class="best">0.332</td><td class="best">0.218</td><td class="best">0.139</td><td class="col-avg best">2.0</td></tr>
+                <tr class="ours"><th>GaussVLA</th><td>BMVC'26</td><td class="second">0.637</td><td class="second">0.367</td><td class="second">0.291</td><td class="second">0.179</td><td>0.000</td><td class="col-avg second">1.474</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <figure class="fig">
+        <img src="static/images/metaworld_sequence.jpg" class="zoom" width="1800" height="716" loading="lazy"
+             alt="Ten frames of GaussVLA picking a puck and placing it onto a shelf in Meta-World">
+        <figcaption>Meta-World, very hard: &ldquo;Pick and place a puck onto a shelf.&rdquo; Successful execution in sequence.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- LIBERO-PRO -->
+  <section class="band" id="robustness">
+    <div class="wrap">
+      <div class="head"><span class="kicker k4">Robustness</span><h2>LIBERO-PRO</h2></div>
+      <div class="table-wrap">
+        <table class="tbl heat" id="pro-table">
+          <thead>
+            <tr class="group">
+              <th rowspan="2">Model</th>
+              <th colspan="5">LIBERO Goal</th><th colspan="5">LIBERO Spatial</th>
+              <th colspan="5">LIBERO 10</th><th colspan="5">LIBERO Object</th>
+              <th rowspan="2" class="col-avg">Avg. SR</th>
+            </tr>
+            <tr>
+              <th>Obj</th><th>Pos</th><th>Sem</th><th>Task</th><th>Env</th>
+              <th>Obj</th><th>Pos</th><th>Sem</th><th>Task</th><th>Env</th>
+              <th>Obj</th><th>Pos</th><th>Sem</th><th>Task</th><th>Env</th>
+              <th>Obj</th><th>Pos</th><th>Sem</th><th>Task</th><th>Env</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>OpenVLA</th>
+              <td>0.96</td><td>0.00</td><td>0.98</td><td>0.00</td><td>0.98</td>
+              <td>0.97</td><td>0.00</td><td>0.97</td><td>0.00</td><td>0.89</td>
+              <td>0.81</td><td>0.00</td><td>0.96</td><td>0.00</td><td>0.85</td>
+              <td>0.98</td><td>0.00</td><td>0.98</td><td>0.00</td><td>0.00</td>
+              <td class="col-avg second">0.52</td></tr>
+            <tr><th>&pi;<sub>0.5</sub></th>
+              <td>0.97</td><td>0.38</td><td>0.97</td><td>0.00</td><td>0.46</td>
+              <td>0.97</td><td>0.20</td><td>0.97</td><td>0.01</td><td>0.46</td>
+              <td>0.92</td><td>0.08</td><td>0.93</td><td>0.01</td><td>0.46</td>
+              <td>0.98</td><td>0.17</td><td>0.96</td><td>0.01</td><td>0.73</td>
+              <td class="col-avg best">0.53</td></tr>
+            <tr><th>&pi;<sub>0</sub></th>
+              <td>0.94</td><td>0.00</td><td>0.93</td><td>0.00</td><td>0.39</td>
+              <td>0.95</td><td>0.00</td><td>0.97</td><td>0.00</td><td>0.60</td>
+              <td>0.79</td><td>0.00</td><td>0.82</td><td>0.00</td><td>0.27</td>
+              <td>0.94</td><td>0.00</td><td>0.90</td><td>0.00</td><td>0.29</td>
+              <td class="col-avg">0.44</td></tr>
+            <tr class="ours"><th>GaussVLA</th>
+              <td>0.81</td><td>0.00</td><td>0.70</td><td>0.00</td><td>0.00</td>
+              <td>0.93</td><td>0.00</td><td>0.73</td><td>0.00</td><td>0.27</td>
+              <td>0.83</td><td>0.00</td><td>0.67</td><td>0.00</td><td>0.00</td>
+              <td>0.92</td><td>0.00</td><td>0.63</td><td>0.00</td><td>0.17</td>
+              <td class="col-avg">0.33</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Normalized success under five perturbation types: object (Obj), position (Pos), semantics (Sem), task (Task) and environment (Env).</p>
+    </div>
+  </section>
+
+  <!-- Real robot -->
+  <section class="band alt" id="realworld">
+    <div class="wrap">
+      <div class="head"><span class="kicker k5">Real world</span><h2>SO-101 Robot</h2></div>
+      <div class="two-col">
+        <div class="chart" aria-label="Multi-task success rate on the SO-101 arm">
+          <h3 class="sub">Multi-task settings <small>success rate (%)</small></h3>
+          <div class="legend">
+            <span><i class="sw act"></i>ACT</span><span><i class="sw svla"></i>SpatialVLA</span><span><i class="sw ours"></i>GaussVLA</span>
+          </div>
+          <div class="bars">
+            <div class="grp"><div class="cols">
+              <div class="col act" style="--v:52.0"><span>52.0</span></div><div class="col svla" style="--v:61.3"><span>61.3</span></div><div class="col ours" style="--v:75.7"><span>75.7</span></div>
+            </div><p>Pick-Place</p></div>
+            <div class="grp"><div class="cols">
+              <div class="col act" style="--v:34.0"><span>34.0</span></div><div class="col svla" style="--v:39.7"><span>39.7</span></div><div class="col ours" style="--v:47.3"><span>47.3</span></div>
+            </div><p>Stacking</p></div>
+            <div class="grp"><div class="cols">
+              <div class="col act" style="--v:21.0"><span>21.0</span></div><div class="col svla" style="--v:37.8"><span>37.8</span></div><div class="col ours" style="--v:53.5"><span>53.5</span></div>
+            </div><p>Sorting</p></div>
+            <div class="grp avg"><div class="cols">
+              <div class="col act" style="--v:35.66"><span>35.66</span></div><div class="col svla" style="--v:46.27"><span>46.27</span></div><div class="col ours" style="--v:58.83"><span>58.83</span></div>
+            </div><p>Average</p></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="sub">Single task: Pick-Place <small>success rate (%)</small></h3>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Method</th><th>ID</th><th>OOD</th><th class="col-avg">Avg.</th></tr></thead>
+              <tbody>
+                <tr><th>ACT</th><td>57.0</td><td>27.8</td><td class="col-avg">42.4</td></tr>
+                <tr><th>SpatialVLA</th><td>69.0</td><td>35.8</td><td class="col-avg">52.4</td></tr>
+                <tr class="ours"><th>GaussVLA</th><td class="best">81.0</td><td class="best">46.7</td><td class="col-avg best">63.9</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">OOD: camera shifted by &plusmn;5&nbsp;cm and &plusmn;10&deg;, never seen in training. 50 teleoperated demonstrations per task.</p>
+        </div>
+      </div>
+      <figure class="fig">
+        <img src="static/images/visual_visual.jpg" class="zoom" width="2280" height="424" loading="lazy"
+             alt="Real-world SO-101 results and rollout frames of a stacking task">
+        <figcaption>Real-world SO-101 evaluation against ACT and SpatialVLA, with rollout frames of a physical stacking task.</figcaption>
       </figure>
     </div>
   </section>
 
   <!-- Ablation -->
-  <section class="section" id="ablation">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Build the Model</h2>
-      <p class="gv-section-intro">
-        Switch the two modules on and off to see the exact cost and benefit of each. Every number below is measured.
-      </p>
+  <section class="band" id="ablation">
+    <div class="wrap">
+      <div class="head"><span class="kicker k6">Ablation</span><h2>What each module adds</h2></div>
 
-      <div class="gv-builder">
-        <div class="gv-builder-controls">
-          <label class="gv-switch is-large">
-            <input type="checkbox" id="gv-gst">
-            <span class="gv-switch-track"><span class="gv-switch-thumb"></span></span>
-            <span class="gv-switch-label">
-              <strong>GST</strong>
-              <em>Gaussian Spatial Tokenizer</em>
-            </span>
-          </label>
-          <label class="gv-switch is-large">
-            <input type="checkbox" id="gv-dacot">
-            <span class="gv-switch-track"><span class="gv-switch-thumb"></span></span>
-            <span class="gv-switch-label">
-              <strong>DA-CoT</strong>
-              <em>Depth-Aware Chain-of-Thought</em>
-            </span>
-          </label>
+      <div class="builder">
+        <div class="builder-controls">
+          <label class="switch"><input type="checkbox" id="sw-gst"><span class="track"><span class="thumb"></span></span>
+            <span class="lbl"><b>GST</b><em>Gaussian Spatial Tokenizer</em></span></label>
+          <label class="switch"><input type="checkbox" id="sw-dacot"><span class="track"><span class="thumb"></span></span>
+            <span class="lbl"><b>DA-CoT</b><em>Depth-Aware Chain-of-Thought</em></span></label>
         </div>
-
-        <div class="gv-builder-readout">
-          <div class="gv-variant-name" id="gv-variant-name">Vanilla GaussVLA</div>
-          <div class="gv-token-mode" id="gv-token-mode">Visual input: flat 2D tokens</div>
-
-          <div class="gv-metric">
-            <div class="gv-metric-head"><span>LIBERO</span><span class="gv-metric-val" id="gv-m-libero">78.1%</span></div>
-            <div class="gv-bar"><div class="gv-bar-fill" id="gv-b-libero" style="width:78.1%"></div></div>
+        <div class="builder-out">
+          <div class="variant" id="b-variant">Vanilla GaussVLA</div>
+          <div class="meter"><div class="meter-head"><span>LIBERO</span><b id="b-libero">78.1%</b></div><div class="meter-bar"><i id="b-libero-bar" style="width:78.1%"></i></div></div>
+          <div class="meter"><div class="meter-head"><span>LIBERO-PRO</span><b id="b-pro">11.2%</b></div><div class="meter-bar alt"><i id="b-pro-bar" style="width:11.2%"></i></div></div>
+          <div class="mini">
+            <div><span>Params</span><b id="b-params">179M</b></div>
+            <div><span>Trainable</span><b id="b-train">158M</b></div>
+            <div><span>GFLOPs</span><b id="b-flops">3.50</b></div>
+            <div><span>Latency</span><b id="b-lat">10.85 ms</b></div>
           </div>
-          <div class="gv-metric">
-            <div class="gv-metric-head"><span>LIBERO-PRO</span><span class="gv-metric-val" id="gv-m-pro">11.2%</span></div>
-            <div class="gv-bar"><div class="gv-bar-fill is-alt" id="gv-b-pro" style="width:11.2%"></div></div>
-          </div>
-
-          <div class="gv-metric-grid">
-            <div><span class="gv-mg-label">Total params</span><span class="gv-mg-val" id="gv-m-params">179M</span></div>
-            <div><span class="gv-mg-label">Trainable</span><span class="gv-mg-val" id="gv-m-train">158M</span></div>
-            <div><span class="gv-mg-label">GFLOPs</span><span class="gv-mg-val" id="gv-m-flops">3.50</span></div>
-            <div><span class="gv-mg-label">Latency</span><span class="gv-mg-val" id="gv-m-lat">10.85 ms</span></div>
-          </div>
-
-          <p class="gv-delta" id="gv-delta">Turn on a module to see its effect.</p>
         </div>
       </div>
+      <p class="note">Core contribution and efficiency ablation. Efficiency measured on a single NVIDIA RTX Pro 6000 Blackwell; latency is end-to-end.</p>
 
-      <figure class="gv-figure">
-        <img src="static/images/Hyperparameter Sweep.png" class="gv-zoomable"
-             alt="Two hyperparameter sweep curves, both peaking at 93.5 percent LIBERO average" loading="lazy">
-        <figcaption>
-          <strong>Hyperparameter sweep.</strong> LIBERO average success across two loss coefficients. Both peak at the
-          reported 93.5%, at 0.05 (left) and 0.10 (right), and degrade sharply beyond 0.5.
-        </figcaption>
-      </figure>
-
-      <figure class="gv-figure">
-        <img src="static/images/failed_case_collage.png" class="gv-zoomable"
-             alt="Collage of failure case rollout frames on a bowl and plate manipulation task" loading="lazy">
-        <figcaption>
-          <strong>Failure cases.</strong> Remaining errors concentrate on fine contact geometry, where the gripper
-          reaches the right region but the grasp does not settle.
-        </figcaption>
-      </figure>
+      <div class="two-col">
+        <div>
+          <h3 class="sub">Query sensitivity <small>LIBERO (%) and latency (ms)</small></h3>
+          <div class="table-wrap">
+            <table class="tbl compact">
+              <tbody>
+                <tr class="hd"><th>N<sub>g</sub> (GST queries)</th><td>8</td><td>32</td><td>64</td><td class="best">128</td><td>256</td></tr>
+                <tr><th>LIBERO</th><td>86.4</td><td>90.7</td><td>92.4</td><td class="best">93.5</td><td>93.6</td></tr>
+                <tr><th>Latency</th><td>11.6</td><td>12.0</td><td>12.4</td><td class="best">12.97</td><td>14.1</td></tr>
+                <tr class="hd"><th>N<sub>r</sub> (DA-CoT queries)</th><td>1</td><td>2</td><td class="best">4</td><td>8</td><td>16</td></tr>
+                <tr><th>LIBERO</th><td>91.8</td><td>92.8</td><td class="best">93.5</td><td>93.4</td><td>92.9</td></tr>
+                <tr><th>Latency</th><td>12.7</td><td>12.8</td><td class="best">12.97</td><td>13.2</td><td>13.7</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note"><b>Bold</b>: default setting.</p>
+        </div>
+        <div>
+          <h3 class="sub">Latency breakdown <small>ms per step, batch 1, BF16</small></h3>
+          <div class="stack" id="latency-stack">
+            <i class="seg frozen" style="--w:5.20" title="Frozen SigLIP-SO400M/14: 5.20 ms"></i>
+            <i class="seg frozen2" style="--w:3.30" title="Frozen Depth-Anything-V2 (ViT-L): 3.30 ms"></i>
+            <i class="seg s1" style="--w:1.42" title="GST module: 1.42 ms"></i>
+            <i class="seg s2" style="--w:1.50" title="Mamba backbone: 1.50 ms"></i>
+            <i class="seg s3" style="--w:0.70" title="DA-CoT conditioner: 0.70 ms"></i>
+            <i class="seg s4" style="--w:0.25" title="Action decoder: 0.25 ms"></i>
+            <i class="seg s5" style="--w:0.60" title="Flow-matching ODE: 0.60 ms"></i>
+          </div>
+          <ul class="stack-legend">
+            <li><i class="sw frozen"></i>SigLIP-SO400M/14 (frozen)<b>5.20</b></li>
+            <li><i class="sw frozen2"></i>Depth-Anything-V2 ViT-L (frozen)<b>3.30</b></li>
+            <li><i class="sw s1"></i><span>GST module (N<sub>g</sub>&nbsp;=&nbsp;128)</span><b>1.42</b></li>
+            <li><i class="sw s2"></i>Mamba backbone<b>1.50</b></li>
+            <li><i class="sw s3"></i>DA-CoT conditioner<b>0.70</b></li>
+            <li><i class="sw s4"></i>Action decoder<b>0.25</b></li>
+            <li><i class="sw s5"></i>Flow-matching ODE, 10 Euler steps<b>0.60</b></li>
+            <li class="total">Total<b>12.97</b></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Real world -->
-  <section class="section hero is-light" id="realworld">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Real Robot (SO-101)</h2>
-      <p class="gv-section-intro">
-        Hover a bar to read its exact success rate.
-      </p>
-
-      <div class="gv-chart" id="gv-realworld-chart">
-        <div class="gv-legend">
-          <span class="gv-legend-item"><i class="gv-swatch gv-c-act"></i>ACT</span>
-          <span class="gv-legend-item"><i class="gv-swatch gv-c-svla"></i>SpatialVLA</span>
-          <span class="gv-legend-item"><i class="gv-swatch gv-c-ours"></i>GaussVLA (Ours)</span>
-        </div>
-        <div class="gv-groups">
-          <div class="gv-group" data-label="Pick-Place">
-            <div class="gv-cols">
-              <div class="gv-col gv-c-act" style="--h:52.0%" data-v="52.0"><span>52.0</span></div>
-              <div class="gv-col gv-c-svla" style="--h:61.3%" data-v="61.3"><span>61.3</span></div>
-              <div class="gv-col gv-c-ours" style="--h:75.7%" data-v="75.7"><span>75.7</span></div>
-            </div>
-            <div class="gv-group-label">Pick-Place</div>
-          </div>
-          <div class="gv-group" data-label="Stacking">
-            <div class="gv-cols">
-              <div class="gv-col gv-c-act" style="--h:34.0%" data-v="34.0"><span>34.0</span></div>
-              <div class="gv-col gv-c-svla" style="--h:39.7%" data-v="39.7"><span>39.7</span></div>
-              <div class="gv-col gv-c-ours" style="--h:47.3%" data-v="47.3"><span>47.3</span></div>
-            </div>
-            <div class="gv-group-label">Stacking</div>
-          </div>
-          <div class="gv-group" data-label="Sorting">
-            <div class="gv-cols">
-              <div class="gv-col gv-c-act" style="--h:21.0%" data-v="21.0"><span>21.0</span></div>
-              <div class="gv-col gv-c-svla" style="--h:37.8%" data-v="37.8"><span>37.8</span></div>
-              <div class="gv-col gv-c-ours" style="--h:53.5%" data-v="53.5"><span>53.5</span></div>
-            </div>
-            <div class="gv-group-label">Sorting</div>
-          </div>
-          <div class="gv-group is-avg" data-label="Average">
-            <div class="gv-cols">
-              <div class="gv-col gv-c-act" style="--h:35.66%" data-v="35.66"><span>35.66</span></div>
-              <div class="gv-col gv-c-svla" style="--h:46.27%" data-v="46.27"><span>46.27</span></div>
-              <div class="gv-col gv-c-ours" style="--h:58.83%" data-v="58.83"><span>58.83</span></div>
-            </div>
-            <div class="gv-group-label">Average</div>
-          </div>
-        </div>
-        <p class="gv-chart-caption">Multi-task success rate (%) on the SO-101 arm.</p>
-      </div>
-
-      <div class="gv-table-wrap gv-table-narrow">
-        <table class="gv-table">
-          <caption class="gv-caption">Single-task Pick-Place, in-distribution and out-of-distribution</caption>
-          <thead>
-            <tr><th scope="col">Method</th><th scope="col">ID</th><th scope="col">OOD</th><th class="gv-col-avg" scope="col">Avg.</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">ACT</th><td>57.0</td><td>27.8</td><td class="gv-col-avg">42.4</td></tr>
-            <tr><th scope="row">SpatialVLA</th><td>69.0</td><td>35.8</td><td class="gv-col-avg">52.4</td></tr>
-            <tr class="gv-ours"><th scope="row">GaussVLA <span class="gv-ours-tag">Ours</span></th><td>81.0</td><td>46.7</td><td class="gv-col-avg">63.9</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <figure class="gv-figure">
-        <img src="static/images/visual_visual.jpg" class="gv-zoomable"
-             alt="Real-world SO-101 evaluation comparing GaussVLA with ACT and SpatialVLA, plus rollout frames of a physical stacking task" loading="lazy">
-        <figcaption>
-          <strong>Real-world SO-101 evaluation.</strong> (a) Multi-task settings, (b) single-task Pick-Place under ID
-          and OOD conditions, and (c) rollout frames for
-          <code>Pick_the_red_cube_and_stack_on_the_small_wheel</code>.
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Single-episode rollout -->
-  <section class="section" id="rollouts">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Single-Episode Rollout</h2>
-      <p class="gv-section-intro">
-        One LIBERO episode at full length, uncut.
-      </p>
-      <div class="gv-video-block">
+  <!-- Rollout -->
+  <section class="band alt" id="rollout">
+    <div class="wrap">
+      <div class="head"><span class="kicker k1">Rollout</span><h2>Single Episode</h2></div>
+      <figure class="video-card small">
         <video controls muted loop playsinline preload="metadata">
           <source src="static/videos/episode_0.mp4" type="video/mp4">
         </video>
-      </div>
-
-      <figure class="gv-figure">
-        <img src="static/images/metaworld_sequence.jpg" class="gv-zoomable"
-             alt="Ten frames of GaussVLA picking a puck and placing it onto a shelf in Meta-World" loading="lazy">
-        <figcaption>
-          <strong>Meta-World (Very Hard).</strong> &ldquo;Pick and place a puck onto a shelf&rdquo;, successful execution
-          from start to finish.
-        </figcaption>
+        <figcaption>A single LIBERO episode, uncut.</figcaption>
       </figure>
-    </div>
-  </section>
-
-  <!-- Video presentation -->
-  <section class="hero is-small is-light" id="video">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3 has-text-centered">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" title="GaussVLA video presentation"
-                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- BibTeX -->
-  <section class="section" id="bibtex">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@inproceedings{Sarowar_2026_BMVC,
+  <section class="band" id="bibtex">
+    <div class="wrap">
+      <div class="head"><span class="kicker k2">Cite</span><h2>BibTeX</h2></div>
+      <div class="bib">
+        <button class="copy" id="copy-bib" type="button">Copy</button>
+        <pre id="bib-code">@inproceedings{Sarowar_2026_BMVC,
 author    = {Md Selim Sarowar and Md Tanvir Islam and Sungho Kim and Sangtae Ahn},
 title     = {GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model},
 booktitle = {37th British Machine Vision Conference 2026, {BMVC} 2026, Lancaster, UK, November 23-26, 2026},
 publisher = {BMVA},
 year      = {2026},
 url       = {https://bmva-archive.org.uk/bmvc/2026/assets/papers/Paper_121/paper.pdf}
-}</code></pre>
+}</pre>
+      </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          Page template adapted from <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a>,
-          licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
-        </p>
-      </div>
-    </div>
-  </footer>
 </main>
 
-<!-- Scroll to top -->
-<button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll back to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<!-- Lightbox -->
-<div class="gv-lightbox" id="gv-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
-  <button class="gv-lightbox-close" id="gv-lightbox-close" aria-label="Close">&times;</button>
-  <img id="gv-lightbox-img" src="" alt="">
-  <p class="gv-lightbox-caption" id="gv-lightbox-caption"></p>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
 </div>
 
 </body>
