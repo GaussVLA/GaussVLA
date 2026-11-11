@@ -33,7 +33,7 @@
   <link rel="icon" type="image/png" href="static/images/robot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/index.css">
   <script defer src="static/js/index.js"></script>
 
@@ -130,16 +130,23 @@
   <section class="band alt" id="method">
     <div class="wrap">
       <div class="head"><span class="kicker k1">Method</span><h2>Framework</h2></div>
-      <figure class="fig">
+      <div class="tabset">
+        <div class="tabbar"><div class="segctl" data-tabs><button type="button" data-tab="fw" class="on">Framework</button><button type="button" data-tab="ov">Overview</button></div></div>
+        <div class="tabpanel" data-panel="fw">
+      <figure class="fig" style="margin-top:0">
         <img src="static/images/framework.jpg" class="zoom" width="2280" height="875" loading="lazy"
              alt="GaussVLA framework: frozen SigLIP and Depth Anything V2 encoders, Gaussian Spatial Tokenizer, Mamba backbone, DA-CoT layer and flow-matching action head">
         <figcaption>Framework of GaussVLA for VLA-based robot manipulation.</figcaption>
       </figure>
-      <figure class="fig fig-narrow">
+        </div>
+        <div class="tabpanel" data-panel="ov">
+      <figure class="fig fig-narrow" style="margin-top:0">
         <img src="static/images/teaser.jpg" class="zoom" width="1140" height="1072" loading="lazy"
              alt="Overview: flat 2D tokens versus 3D Gaussian Spatial Tokens, with attention maps of a failed and a successful rollout">
         <figcaption>Overview of GaussVLA.</figcaption>
       </figure>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -148,7 +155,7 @@
     <div class="wrap">
       <div class="head"><span class="kicker k2">Simulation</span><h2>LIBERO</h2></div>
       <div class="table-wrap">
-        <table class="tbl sortable" id="libero-table">
+        <table class="tbl sortable" id="libero-table" data-chart="6" data-chart-max="100" data-chart-title="LIBERO average success (%)">
           <thead>
             <tr>
               <th data-sort="text">Method</th><th data-sort="text">Venue</th>
@@ -185,11 +192,12 @@
   <section class="band alt" id="transfer">
     <div class="wrap">
       <div class="head"><span class="kicker k3">Transfer</span><h2>Meta-World &amp; CALVIN</h2></div>
-      <div class="two-col">
-        <div>
+      <div class="tabset">
+        <div class="tabbar"><div class="segctl" data-tabs><button type="button" data-tab="mw" class="on">Meta-World</button><button type="button" data-tab="calvin">CALVIN</button></div></div>
+        <div class="tabpanel" data-panel="mw">
           <h3 class="sub">Meta-World <small>success rate (%) by difficulty split</small></h3>
           <div class="table-wrap">
-            <table class="tbl">
+            <table class="tbl" data-chart="6" data-chart-max="100" data-chart-title="Meta-World average success (%)">
               <thead><tr><th>Method</th><th>Venue</th><th>Easy</th><th>Mid</th><th>Hard</th><th>V.Hard</th><th class="col-avg">Avg.</th></tr></thead>
               <tbody>
                 <tr><th>BC-RNN</th><td>CoRL'21</td><td>4.5</td><td>3.8</td><td>3.2</td><td>3.0</td><td class="col-avg">3.6</td></tr>
@@ -201,10 +209,10 @@
             </table>
           </div>
         </div>
-        <div>
+        <div class="tabpanel" data-panel="calvin">
           <h3 class="sub">CALVIN ABCD&rarr;D <small>tasks completed in a row, 10% subset</small></h3>
           <div class="table-wrap">
-            <table class="tbl">
+            <table class="tbl" data-chart="7" data-chart-max="5" data-chart-title="CALVIN average completed sequence length (of 5)">
               <thead><tr><th>Method</th><th>Venue</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th class="col-avg">Avg. Len.</th></tr></thead>
               <tbody>
                 <tr><th>MCIL</th><td>RSS'21</td><td>0.37</td><td>0.027</td><td>0.002</td><td>0.000</td><td>0.000</td><td class="col-avg">0.40</td></tr>
@@ -230,7 +238,7 @@
     <div class="wrap">
       <div class="head"><span class="kicker k4">Robustness</span><h2>LIBERO-PRO</h2></div>
       <div class="table-wrap">
-        <table class="tbl heat" id="pro-table">
+        <table class="tbl heat" id="pro-table" data-max="1" data-group="5">
           <thead>
             <tr class="group">
               <th rowspan="2">Model</th>
@@ -432,5 +440,26 @@ url       = {https://bmva-archive.org.uk/bmvc/2026/assets/papers/Paper_121/paper
   <img id="lightbox-img" src="" alt="">
 </div>
 
+<script>
+/* Ablation toggles: values are Table 4 of the paper. */
+document.addEventListener('DOMContentLoaded', function () {
+  var V = {
+    '00': { name: 'Vanilla GaussVLA', libero: 78.1, pro: 11.2, params: '179M', train: '158M', flops: '3.50', lat: '10.85 ms' },
+    '10': { name: '+ GST only', libero: 90.5, pro: 29.0, params: '190.2M', train: '169.2M', flops: '4.33', lat: '12.27 ms' },
+    '01': { name: '+ DA-CoT only', libero: 82.1, pro: 16.7, params: '188.8M', train: '167.8M', flops: '4.00', lat: '11.55 ms' },
+    '11': { name: 'Full GaussVLA', libero: 93.5, pro: 33.3, params: '200M', train: '179M', flops: '4.83', lat: '12.97 ms' }
+  };
+  var g = document.getElementById('sw-gst'), d = document.getElementById('sw-dacot');
+  function $(id) { return document.getElementById(id); }
+  function render() {
+    var v = V[(g.checked ? '1' : '0') + (d.checked ? '1' : '0')];
+    $('b-variant').textContent = v.name;
+    $('b-libero').textContent = v.libero.toFixed(1) + '%'; $('b-pro').textContent = v.pro.toFixed(1) + '%';
+    $('b-libero-bar').style.width = v.libero + '%'; $('b-pro-bar').style.width = v.pro + '%';
+    $('b-params').textContent = v.params; $('b-train').textContent = v.train; $('b-flops').textContent = v.flops; $('b-lat').textContent = v.lat;
+  }
+  if (g && d) { g.addEventListener('change', render); d.addEventListener('change', render); render(); }
+});
+</script>
 </body>
 </html>
